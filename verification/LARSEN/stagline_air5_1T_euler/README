@@ -1,0 +1,38 @@
+
+This testcase takes a solution of the Euler equations, obtained 
+with the stagnation-line code "Stagline", and recomputes it using LARSEN.
+
+The mixture is air5, with one Temperature (T = Tr = Tv = Tel = Te).
+
+TO RUN THE TESTCASE, JUST RUN "./run_testcase.sh"
+
+LARSEN is asked to use the very same mixture model (air5) and thermal
+model (1T).
+Diffusion of mass and energy is zero (Euler equations): the particle is 
+adiabatic.
+
+This testcase is a simulation of a sphere with velocity 9km/s at an altitude 
+of around 60km.
+See the file "stagline_input_file" for the freestream conditions.
+
+LARSEN notably gets crazy very close to the stagnation point, since the 
+velocity goes to zero.
+
+If you find (small) mismatches with respect to the reference result figures, it may
+be due to a different version of the thermodinamic library that you are using
+(note: see [1]).
+
+In the "mutation++_files" folder you can also find the "air5.xml" mixture file
+and the "air5mechanism.xml" reactions file that were used to run this simulation.
+
+
+==========
+NOTES
+
+[1] For example, seems like there is a wrong value in the air5 (and air11 maybe)
+    reaction mechanism file, not really matching the Park01 rates.
+    This may still be the case in your implementation, or may not.
+    If your new Mutation++ implementation still has this error, contact the
+    Mutation++ developers.
+
+

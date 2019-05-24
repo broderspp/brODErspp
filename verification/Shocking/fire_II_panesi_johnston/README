@@ -1,0 +1,40 @@
+This testcase compares the result of the current brODErs++ version of Shocking
+with some results from the old Shocking version by Panesi and with a result
+by Johnston. Values were digitized from the Panesi PhD thesis.
+
+The mixture is air11 with a two-temperature model (T,Tv): 
+T = Tr, Tv = Tel = Te.
+
+The flight conditions are relative to the 1634 s trajectory point of the 
+FIRE-II capsule.
+
+Free-stream conditions:
+  2.0 Pa
+  195 K
+  11360 m/s
+
+Results are pretty much off, but are reasonable at least.
+
+MIND THAT:
+- Panesi results use the (old) Mutation library and use different rates and
+  transfer terms,
+- Johnston results use different post-shock conditions for some reason (see the
+  references).
+
+##############    R E F E R E N C E S:    ################
+
+ M. Panesi, 
+  Physical Models for Nonequilibrium Plasma Flow Simulations at 
+  High-Speed Re-Entry Conditions, 
+  PhD thesis, 
+  Universita' degli Studi di Pisa,
+  von Karman Institute for Fluid Dynamics, 
+  2009.
+
+ C. O. Johnston,
+  Nonequilibrium Shock-Layer Radiative Heating for Earth and 
+  Titan Entry,
+  PhD thesis,
+  Virginia Polytechnic Institute and State University,
+  2006.
+

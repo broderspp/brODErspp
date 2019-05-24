@@ -1,0 +1,3 @@
+Files in this folder create a series of parallel streamlines 
+with constant velocity, density and temperature.
+They can be used for testing the solver.

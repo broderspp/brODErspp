@@ -1,0 +1,23 @@
+The OCTAVE scripts in this folder convert paraview-exported streamlines to 
+MULTILARSEN-intelligible stremlines.
+The scripts should work with MATLAB as well.
+
+1) Run the MAIN_all_streamlines_export.m script. This reads a paraview-exported file and
+   shows you how it would like to export streamlines.
+   - If you like it, type Y and enter. It will write streamlines in the 
+     exported_streamlines directory
+   - If you don't like it, type N. Modify the parameters in the script as you prefer.
+
+2) Now run the octaStreamlineConverterInterp.m script. Long name, huh? :-)
+   This will convert streamlines in the MULTILARSEN format.
+   Streamlines will be placed in the output_streamlines folder.
+   Inside the script you'll have to change a couple of parameters to tell which 
+   streamlines you want to process.
+
+3) IT'S POSSIBLE THAT STREAMLINES ARE UPSIDE-DOWN (maybe paraview exported them from the
+   one with highest y to the one with lowest y). In this case, manually rename the files
+   in the desired order.
+   ALSO NOTE THAT you may see streamlines starting not from 00000. You may find the 
+   reason for that in some settings in the MAIN_all_streamlines_export.m file.
+
+

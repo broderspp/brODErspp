@@ -1,0 +1,58 @@
+
+This directory contains some testcases that can be used to test LARSEN or Shocking.
+Those testcases may be useful to quickly verify new implementations and modifications
+of the codes.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! PLEASE MAKE SURE THAT **ALL** TESTCASES WORK FINE BEFORE COMMITTING CHANGES ETC !!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+To run the testcase just get into the folder and run the script "run_<something>.sh"
+
+The bash script automatically runs brODErs++, located in the bin directory just a few 
+folders above.
+The output is shown with Octave... so NEEDS OCTAVE TO BE INSTALLED.
+Some plots are also saved to png images.
+
+You can compare the output that you get with the "Reference_result_XXXX.png" images,
+that show a result that I think is reasonable.
+Some comparisons are given against the stagnation line code "Stagline", that uses a 
+different implementation (of course) but is linked to the same library.
+In case you are wondering, the Stagline simulations are well converged, the residuals 
+being around 10^-4 (being started from 10^5).
+The numerical scheme is Roe first order, implicit in time.
+
+
+###  DIRECTORY TREE:
+
+brODErs++
+   |
+   `-- verification
+       |
+       |-- README (this file)
+       |
+       |-- LARSEN
+       |   |  
+       |   |-- shock_1D_air11_1T
+       |   |  
+       |   |-- shock_1D_air11_TTv
+       |   | 
+       |   |-- stagline_air5_1T_NS
+       |   |
+       |   |-- stagline_air5_1T_euler
+       |   |
+       |   |-- stagline_air5_TTV_euler
+       |   | 
+       |   `-- streamline_2D_argon
+       |
+       `-- Shocking
+           | 
+           |-- OLD
+           | 
+           |-- fire_II_panesi_johnston
+           |
+           |-- stagline_air5_1T_euler
+           |  
+           `-- stagline_air5_TTv_euler
+      
+

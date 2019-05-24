@@ -1,0 +1,55 @@
+#################################################################
+#
+# This file can contain comments in any position of the line.
+# White spaces around key lines are automatically removed.
+# White lines are ignored.
+#
+# The bare minimum to be specified is: 
+# -> Problem Type
+# -> Name of the mixture
+# -> State Model
+# -> Thermodynamic Database
+#
+# The remaining settings depend on the particular solver
+# you wish to use.
+#
+################################################################
+
+# ---------------   Mixture options ------------------
+Problem type:     # Comment! Hello!
+larsen
+#shocking
+
+Name of the mixture:
+air5
+
+State model:
+ChemNonEq1T
+
+Thermodynamic database:
+RRHO
+
+# ---------------   LARSEN options   -----------------
+
+# External flowfield computation
+External flowfield filename:
+stagline_baseline_sol.dat
+
+Species input type: # default: mass_fraction
+#mass_fraction
+mole_fraction
+
+Species output type: # default: mass_fraction
+#mass_fraction
+mole_fraction
+
+
+# Diffusion of total enthalpy: external / adiabatic
+Total enthalpy diffusion:
+adiabatic
+#external
+
+Diffusive mass fluxes:
+none
+#external_stagline_sphere
+

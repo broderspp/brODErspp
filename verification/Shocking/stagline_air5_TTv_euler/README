@@ -1,0 +1,29 @@
+This testcase compares the solution along the stagnation line of a sphere
+(computed with the Stagline code) with the output of the current brODErs++ verion of 
+Shocking++.
+
+TO RUN THE TESTCASE, RUN THE SCRIPT: "./run_testcase"
+
+The model used by stagline is inviscid (Euler): no heat or diffusive mass fluxes.
+The numerical scheme is a time-implicit Roe.
+The mixture is air5 in thermal nonequilibrium (2 temperatures model: T = Tr, 
+Tv = Tel = Te).
+
+The sphere has a 1m radius.
+
+Freestream conditions are:
+Press:                20.31 Pa
+Translational Temp:   245.45 K
+Vibrational Temp:     245.45 K
+Velocity:             9000 m/s
+
+A good matching is seen in the shock region.
+Then, the velocity after the shock departures in the stagnation line (2D axysimmetric) 
+case, while for Shocking (1D solution) it reaches a plateau.
+Accordingly, there is some difference in the temperature in the post-shock region.
+In particular, the velocity decreases for the stagnation line case, thus the equilibrium
+is reached more easily (more time for the temperatures to equilibrate) with respect
+to the Shocking case, where the velocity reaches a given value.
+
+The octave script automatically puts the Shocking output in correspondance of the shock
+wave (by watching the rise in temperature).

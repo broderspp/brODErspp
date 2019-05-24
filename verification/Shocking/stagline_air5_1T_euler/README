@@ -1,0 +1,19 @@
+This testcase compares the solution along the stagnation line of a sphere
+(computed with the Stagline code) with the output of the current brODErs++ verion of 
+Shocking++.
+
+TO RUN THE TESTCASE, RUN THE SCRIPT: "./run_testcase"
+
+The model used by stagline is inviscid (Euler): no heat or diffusive mass fluxes.
+The numerical scheme is a time-implicit Roe.
+The mixture is air5 in thermal equilibrium (T = Tr = Tv = Te).
+
+The sphere has a 1m radius.
+
+Freestream conditions are:
+Press:                20.31 Pa
+Translational Temp:   245.45 K
+Velocity:             9000 m/s
+
+The octave script automatically puts the Shocking output in correspondance of the shock
+wave (by watching the rise in temperature).

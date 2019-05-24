@@ -1,0 +1,11 @@
+<mixture thermo_db="RRHO">
+
+    <default_element_fractions>
+        Ar : 1
+    </default_element_fractions>
+
+    <species>
+        Ar
+    </species>
+    
+</mixture>

@@ -1,0 +1,31 @@
+
+To run the testcase, just run ./run_testcase.sh
+This will call shockingpp a couple of folders above for the current testcase.
+
+This testcase comes from a DSMC simulation of an (non-ionizing) argon flow over
+a cylinder.
+Larsen recomputes the temperature along a streamline. See a picture in this 
+folder.
+
+Since the mixture is composed of argon only, there are no chemical reactions and
+all LARSEN does is recomputing the temperature.
+
+####  Mixture
+
+The mixture is an only-argon mixture "argon_only.xml". You can find it in this 
+folder. Copy it in the data/mixtures directory of mutation++.
+
+####  Simulation parameters:
+
+Velocity: 2.609 km/s
+Free stream number density: 8.606E+19
+Temperature: 222 K
+Knudsen number: 0.05
+
+####  About the simulation
+
+The simulation was performed with SPARTA, and literature results are also available, 
+see Lofthouse (NONEQUILIBRIUM HYPERSONIC AEROTHERMODYNAMICS USING THE DIRECT 
+SIMULATION MONTE CARLO AND NAVIER-STOKES MODELS, PhD dissertation).
+
+

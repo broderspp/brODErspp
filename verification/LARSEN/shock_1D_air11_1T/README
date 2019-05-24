@@ -1,0 +1,38 @@
+
+This testcase compares the current LARSEN implementation with the output of 
+the old C++ version of Shocking written by Pierre Schrooyen in 2014.
+
+The mixture is air11, 1 temperature (T = Tr = Tv = Tel = Te).
+
+TO RUN THE TESTCASE, SIMPLY RUN "./run_testcase"
+
+The testcase gives to LARSEN the old Shocking result and asks LARSEN to 
+recompute the same thing (same mixture, same chemical model).
+
+
+NOTE THAT ALTHOUGH THE NAMES ARE SIMILAR, THIS TESTCASE IS FUNDAMENTALLY 
+DIFFERENT FROM WHAT YOU CAN FIND IN THE FOLDER shock_1D_air11_TTv!
+
+This testcase computes a solution with the brODErs++ version of Shocking++
+and tries to reproduce it using LARSEN.
+The idea is checking if LARSEN is able to reproduce it or not.
+
+The mixture is air11, 2 temperatures (T = Tr, Tv = Tel = Te).
+
+If you find (small) mismatches with respect to the reference result figures, it may 
+be due to a different version of the thermodinamic library that you are using 
+(note: see [1]).
+
+In the "mutation++_files" folder you can also find the "air11.xml" mixture file 
+and the "parkair01.xml" reactions file that were used to run this simulation.
+
+
+========== 
+NOTES
+
+[1] For example, seems like there is a wrong value in the air5 (and air11 maybe) 
+    reaction mechanism file, not really matching the Park01 rates.
+    This may still be the case in your implementation, or may not.
+    If your new Mutation++ implementation still has this error, contact the 
+    Mutation++ developers.
+
